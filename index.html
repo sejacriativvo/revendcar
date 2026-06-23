@@ -8,25 +8,20 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            red: { DEFAULT: '#D81E2C', bright: '#F2353F', deep: '#8E0E18' },
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        },
-      },
-    };
-  </script>
+  <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/logo-revendcar.png" as="image" />
+  <link rel="stylesheet" href="assets/tw.css" />
 
   <style>
+    /* Inter variável, auto-hospedada (latin) — um arquivo cobre 400 a 800 */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('assets/fonts/inter-latin-var.woff2') format('woff2');
+    }
+
     html { scroll-behavior: smooth; }
     body { background: #000; }
 
@@ -213,7 +208,7 @@
   <header class="fixed top-0 inset-x-0 z-50">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <nav id="nav" class="mt-4 flex items-center justify-between rounded-none border border-transparent px-4 py-3 transition-all duration-300">
-        <img src="assets/logo-revendcar.png" alt="RevendCar" class="h-7 w-auto object-contain" />
+        <img src="assets/logo-revendcar.png" alt="RevendCar" width="1537" height="398" decoding="async" class="h-7 w-auto object-contain" />
         <a href="#" class="js-wa inline-flex items-center gap-2 rounded-md bg-red px-4 py-2 text-sm font-semibold text-white hover:bg-red-bright transition">
           Quero uma vaga
         </a>
@@ -264,7 +259,7 @@
           <div class="panel-tilt relative z-10 overflow-hidden rounded-none border border-black/5 bg-white text-neutral-900 shadow-[0_50px_140px_-40px_rgba(216,30,44,.6)]">
             <!-- top bar -->
             <div class="flex items-center justify-between border-b border-neutral-100 px-5 py-3.5">
-              <img src="assets/logo-revendcar.png" alt="RevendCar" class="h-6 w-auto object-contain brightness-0" />
+              <img src="assets/logo-revendcar.png" alt="RevendCar" width="1537" height="398" loading="lazy" decoding="async" class="h-6 w-auto object-contain brightness-0" />
               <div class="flex items-center gap-1.5">
                 <span class="h-2 w-2 rounded-full bg-neutral-200"></span>
                 <span class="h-2 w-2 rounded-full bg-neutral-200"></span>
